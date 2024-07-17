@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\LoginController@index')->name('loginpage');
+Route::get('/quydinh', 'App\Http\Controllers\LoginController@quydinh');
 Route::post('/dangnhap', 'App\Http\Controllers\LoginController@dangNhap');
 Route::get('/dangxuat', 'App\Http\Controllers\LoginController@dangXuat');
 

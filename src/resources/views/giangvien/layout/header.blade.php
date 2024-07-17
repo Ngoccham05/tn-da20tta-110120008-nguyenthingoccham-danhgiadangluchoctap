@@ -186,6 +186,13 @@
               </a>
             </li>
 
+            <li>
+              <a href="/quydinh">
+                <i class="fas fa-check-double"></i>
+                <span> Các quy định khác </span>
+              </a>
+            </li>
+
           </ul>
         </div> <!-- End Sidebar -->
 

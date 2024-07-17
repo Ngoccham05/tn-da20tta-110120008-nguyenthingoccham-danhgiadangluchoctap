@@ -11,6 +11,27 @@ use App\Models\taikhoan;
 
 class LoginController extends Controller
 {
+    public function quydinh(Request $rq)
+    {
+        if(Auth::guard('admin')->check()){
+            return view('admin.quydinh');
+        }
+        else if(Auth::guard('gv')->check()){
+            return view('admin.quydinh');
+        }
+        else{       
+            $nguoi_dung = Auth::guard('sv')->user();
+            $ma_lop = DB::table('sinh_vien')->where('ma_sinh_vien', $nguoi_dung->ten_dang_nhap)->value('ma_lop');
+
+            $nganh = Db::table('nganh')
+                ->join('chuong_trinh_dao_tao', 'chuong_trinh_dao_tao.ma_nganh', '=', 'nganh.ma_nganh')
+                ->join('lop', 'lop.ma_chuong_trinh', '=', 'chuong_trinh_dao_tao.ma_chuong_trinh')
+                ->where('ma_lop', $ma_lop)
+                ->first();     
+            return view('admin.quydinh', compact('nganh'));
+        }
+    }
+    
     public function index(Request $rq)
     {
         if(Auth::guard('admin')->check()){
