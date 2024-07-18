@@ -60,7 +60,7 @@
       <div class="indent">
         5. Sinh viên không nên học cải thiện điểm để nâng cao điểm trung bình chung tích lũy đối với những học phần trong học kỳ cuối 
         nhằm tránh trường hợp đến thời điểm xét tốt nghiệp mà sinh viên chưa hoàn thành điểm học cải thiện. 
-        Trường hợp sinh vien vẫn mong muốn học cải thiện để nâng cao điểm trung bình chung tích lũy ở học kỳ cuối thì sinh viên làm đơn cam kết, có xác nhận của cố vấn học tập.
+        Trường hợp sinh viên vẫn mong muốn học cải thiện để nâng cao điểm trung bình chung tích lũy ở học kỳ cuối thì sinh viên làm đơn cam kết, có xác nhận của cố vấn học tập.
       </div>
 
       <div class="indent">

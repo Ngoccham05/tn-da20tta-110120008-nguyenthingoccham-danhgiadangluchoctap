@@ -188,7 +188,7 @@
         }, {
           label: 'TB cả lớp',
           data: tbHocKy_1,
-          borderColor: '#f26464',
+          borderColor: '#4BC0C0',
           fill: false,
           tension: 0.2
         }, {

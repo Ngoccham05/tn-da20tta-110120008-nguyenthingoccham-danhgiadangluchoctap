@@ -60,8 +60,7 @@ def goiy_mon_can_cai_thien(X, nhom_mon_hoc, index_sv):
   diem_trung_binh_nhom = trung_binh_nhom(X, nhom_mon_hoc)
   # gán nhãn 
   y = np.vectorize(gan_nhan_diem)(X, diem_trung_binh_nhom)
-
-  print(y)
+  # print(y)
 
   X_train = np.delete(X, index_sv, axis=0)
   y_train = np.delete(y, index_sv, axis=0)

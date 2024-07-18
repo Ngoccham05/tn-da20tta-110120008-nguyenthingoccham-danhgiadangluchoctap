@@ -151,7 +151,6 @@
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
       success: function (data) {
-        toastr.clear(toast);
         $('#modalThemSua').modal('hide');
         $('#btnThemNhSV').removeClass('disabled');
         if (data = "Thành công") {
@@ -161,6 +160,7 @@
           customThongBao();
           toastr.error('Lỗi định dạng dữ liệu', 'Thêm thành công');
         }
+
 
       },
       error: function (xhr) {
@@ -186,7 +186,8 @@
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
         success: function (data) {
-          // console.log(data);
+          $('#modalThemSua').modal('hide');
+          $('#btnThemNhSV').removeClass('disabled');
           if (data == "Thành công") {
             customThongBao();
             toastr.success('', 'Đã thêm thành công');
