@@ -96,8 +96,35 @@
           for (let j = 0; j < data.length; j++) {
             const point = meta.data[j];
             const value = data[j].y;
+            
+            switch(value) {
+            case 0:
+              var color = "rgb(255,0,0, 0.8)";
+              break;
+            case 1.0:
+              var color = "rgb(255,69,0, 0.8)";
+              break;
+            case 1.5:
+              var color = "rgb(255,255,0, 0.8)";
+              break;
+            case 2.0:
+              var color = "rgb(173,255,47, 0.8)";
+              break;
+            case 2.5:
+              var color = "rgb(0,255,0, 0.8)";
+              break;
+            case 3.0:
+              var color = "rgb(0,191,255, 0.8)";
+              break;
+            case 3.5:
+              var color = "rgb(30,144,255)";
+              break;
+            default:
+              var color = "rgb(0,0,255, 0.8)";
+            }
+
             point.custom = {
-              backgroundColor: value > 2 ? '#1bb99a' : '#ff5d48',
+              backgroundColor: color,
             };
           }
         }

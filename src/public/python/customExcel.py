@@ -52,6 +52,7 @@ def cross_validate_knn(X, nhom_mon_hoc):
 
     accuracy = accuracy_score(y_test.flatten(), y_pred.flatten())
     accuracies.append(accuracy)
+    # print(f"Accuracy: {accuracy}")
 
   return np.mean(accuracies), np.std(accuracies)
 
@@ -86,6 +87,7 @@ def tao_mang(diem):
 @app.route('/goiycaithien', methods=['POST'])
 def goiycaithien():
   data = request.get_json()
+  # print(data['diem'])
 
   diem = tao_mang(data['diem'])
   nhom_mon_hoc = {int(k): v for k, v in data['nhom_mon'].items()}

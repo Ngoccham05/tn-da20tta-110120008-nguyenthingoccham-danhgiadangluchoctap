@@ -51,7 +51,9 @@
           </div>
         </div>
         <!-- biểu đồ -->
-        <div id="chart" class="col-7 mb-4"></div>
+        <div id="chart" class="col-7 mb-4">
+          <h5 id="h5" class="d-none">Trung bình học kỳ</h5>
+        </div>
       </div>
 
       <table id="customtable" class="table table-bordered dt-responsive nowrap table-custom d-none" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -171,6 +173,7 @@
     const tbTichLuy_2 = tb_khoa.map(item => item.trung_binh_tich_luy_khoa);
     const tenHocKy_2 = tb_khoa.map(item => item.ten_hoc_ky_nien_khoa_khoa);
 
+    $('#h5').removeClass('d-none');
     $("#chart #bieuDoDiem").remove();
     $("#chart").append('<canvas id="bieuDoDiem" height="100"></canvas>');
 
